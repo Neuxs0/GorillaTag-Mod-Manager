@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GorillaTag Plugin Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>GorillaTag Plugin Manager</h1>
+      </header>
+
+      <!-- BepInEx management controls section -->
+      <div id="bepinex-container" class="bepinex-control"></div>
+
+      <!-- Tab Navigation -->
+      <nav class="tab-container">
+        <button id="plugins-tab" class="tab-button active">Plugins</button>
+        <button id="other-tab" class="tab-button">Other</button>
+      </nav>
+      <main>
+        <!-- Plugins tab content with scrollable list -->
+        <section id="plugins-content" class="content active">
+          <div class="list-container">
+            <ul id="plugins-list"></ul>
+          </div>
+        </section>
+        <!-- Other files tab content -->
+        <section id="other-content" class="content">
+          <ul id="other-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- Confirmation modal for plugin deletion -->
+    <div id="confirm-modal" class="modal">
+      <div class="modal-content">
+        <p>Are you sure you want to delete this plugin?</p>
+        <div class="modal-buttons">
+          <button id="confirm-yes">Yes</button>
+          <button id="confirm-no">No</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warning modal for BepInEx installation -->
+    <div id="install-warning-modal" class="modal">
+      <div class="modal-content">
+        <p id="install-warning-message">
+          You need to install BepInEx before adding plugins!
+        </p>
+        <div class="modal-buttons">
+          <button id="warning-ok">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
